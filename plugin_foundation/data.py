@@ -6,7 +6,8 @@ exclude_dirs = ['.git', '.terraform', '.one', 'terraform.tfstate.d', 'terraform-
 exclude_files = ['.terraform', 'terraform.tfstate*', '.env', '.env.auth', '.terraform-plan-*']
 
 bubbletea_repos = [
-    "infra-bubbletea-app-platform",
+    "infra-bubbletea-app-platform-ecs",
+    "infra-bubbletea-app-platform-eks",
     "infra-bubbletea-domain",
     "infra-bubbletea-identity",
     "infra-bubbletea-network",
