@@ -19,15 +19,12 @@ def foundation():
 
 @foundation.command(name='clone', help='Clone DNX foundation.')
 def clone():
-    if not os.path.exists('aws-platform'):
-        os.makedirs('aws-platform')
-
     for repository in bubbletea_repos:
-        if not os.path.exists('./aws-platform/' + repository):
-            git.Git('./aws-platform').clone(GITLAB_BASE_URL + BUBBLETEA_REPOSITORY_URL + repository + GIT)
+        if not os.path.exists('./' + repository):
+            git.Git('./').clone(GITLAB_BASE_URL + BUBBLETEA_REPOSITORY_URL + repository + GIT)
             print('Cloned ' + repository)
         else:
-            print('Skipping module' + repository + 'configuration, folder already exist')
+            print('Skipping stack' + repository + ', folder already exist')
 
 
 @foundation.command(name='start', help='Start DNX foundation config for stacks.')
