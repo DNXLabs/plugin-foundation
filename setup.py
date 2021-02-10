@@ -11,7 +11,7 @@ install_requires = [
     'jinja2-ansible-filters==1.3.0'
 ]
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 setup(
     name='one-cli-plugin-foundation',
